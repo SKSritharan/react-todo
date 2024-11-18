@@ -1,11 +1,8 @@
+import { Todo } from "../../models/Todo";
 import TodoItem from "./TodoItem";
 
 interface TodoListProps {
-  todos: {
-    id: number;
-    text: string;
-    completed: boolean;
-  }[];
+  todos: Todo[];
   markAsCompleted: (id: number) => void;
   deleteTodo: (id: number) => void;
 }

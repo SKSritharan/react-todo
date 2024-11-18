@@ -1,11 +1,9 @@
+import { Todo } from "../../models/Todo";
+
 interface TodoItemProps {
   markAsCompleted: (id: number) => void;
   deleteTodo: (id: number) => void;
-  todo: {
-    id: number;
-    text: string;
-    completed: boolean;
-  };
+  todo: Todo;
 }
 
 const TodoItem = ({ markAsCompleted, deleteTodo, todo }: TodoItemProps) => {
