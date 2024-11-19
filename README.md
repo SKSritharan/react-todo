@@ -4,9 +4,7 @@ This is a simple Todo application built with React for the frontend and Express 
 
 ## How To Run
 
-1. Clone the repository:
-   `git clone <repository-url>`
-   `cd todo-app`
+1. Clone the repository
 
 2. Set the Atlas URI connection parameter in server/.env to your Connection String:
    `MONGODB_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
