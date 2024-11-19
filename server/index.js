@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const mongoString = process.env.DATABASE_URL;
 const routes = require("./routes/routes");
+const cors = require("cors");
 
 mongoose.connect(mongoString);
 const database = mongoose.connection;
@@ -17,8 +18,8 @@ database.once("connected", () => {
 });
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-
 app.use("/api", routes);
 
 app.listen(3000, () => {
