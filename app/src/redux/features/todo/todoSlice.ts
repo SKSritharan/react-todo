@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Todo } from "../../models/Todo";
+import { Todo } from "../../../models/Todo";
 
 const todoSlice = createSlice({
   name: "todos",

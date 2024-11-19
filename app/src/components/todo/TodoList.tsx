@@ -3,8 +3,8 @@ import TodoItem from "./TodoItem";
 
 interface TodoListProps {
   todos: Todo[];
-  markAsCompleted: (id: number) => void;
-  deleteTodo: (id: number) => void;
+  markAsCompleted: (id: string) => void;
+  deleteTodo: (id: string) => void;
 }
 
 const TodoList = ({ todos, markAsCompleted, deleteTodo }: TodoListProps) => {
@@ -13,7 +13,7 @@ const TodoList = ({ todos, markAsCompleted, deleteTodo }: TodoListProps) => {
       <ul className="mt-4 divide-y divide-gray-300">
         {todos.map((todo) => (
           <TodoItem
-            key={todo.id}
+            key={todo._id}
             todo={todo}
             markAsCompleted={markAsCompleted}
             deleteTodo={deleteTodo}
